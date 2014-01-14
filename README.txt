@@ -105,3 +105,20 @@ perl evaluate2.pl -input data\monthly\12mo\MtGoxUSD_2013_*_12mo.csv_results.csv 
 Finally, determine the best rebalance parameters by mainly looking at the
 Avg Sortino Ratio column.
 
+Next steps:
+
+1. Implement actual MtGox trading support to perform some trading.
+    * Need to worry about price fluctuations and cases where we can't actually
+      buy/sell at the expected price.
+    * Manage orders
+    
+2. Investigate other technical indicators/methods
+    * MACD (didn't work very well. What's the appropriate last parameter?)
+    * RSI: http://www.tradingmarkets.com/recent/why_rsi_may_be_one_of_the_best_short-term_indicators_-673367.html
+    * TSI: http://en.wikipedia.org/wiki/True_strength_index
+    * Look at EMA slope?
+    * Wait for indicators to remain in BUY mode for some time before committing?
+
+3. Self-tuning. 
+    * Re-tune EMAs and rebalance parameters monthly and re-apply.
+    
